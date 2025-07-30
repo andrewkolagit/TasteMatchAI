@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   const ai = new GoogleGenAI({ apiKey });
 
   try {
-    // Prepare chat history for the SDK
+    
     const history = messages.map((m) => ({
       role: m.role === 'user' ? 'user' : 'model',
       parts: [{ text: m.content }]
